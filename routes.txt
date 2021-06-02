@@ -1,0 +1,41 @@
++--------+-----------+---------------------------------+------------------------+---------------------------------------------------------------+------------+
+| Domain | Method    | URI                             | Name                   | Action                                                        | Middleware |
++--------+-----------+---------------------------------+------------------------+---------------------------------------------------------------+------------+
+|        | GET|HEAD  | cargo                           | cargo.index            | App\Http\Controllers\Maestras\CargoController@index           | api        |
+|        | POST      | cargo                           | cargo.store            | App\Http\Controllers\Maestras\CargoController@store           | api        |
+|        | PUT|PATCH | cargo/{cargo}                   | cargo.update           | App\Http\Controllers\Maestras\CargoController@update          | api        |
+|        | DELETE    | cargo/{cargo}                   | cargo.destroy          | App\Http\Controllers\Maestras\CargoController@destroy         | api        |
+|        | GET|HEAD  | cargo/{cargo}                   | cargo.show             | App\Http\Controllers\Maestras\CargoController@show            | api        |
+|        | GET|HEAD  | ciiu                            | ciiu.index             | App\Http\Controllers\Maestras\CiiuController@index            | api        |
+|        | POST      | ciiu                            | ciiu.store             | App\Http\Controllers\Maestras\CiiuController@store            | api        |
+|        | GET|HEAD  | ciiu/{ciiu}                     | ciiu.show              | App\Http\Controllers\Maestras\CiiuController@show             | api        |
+|        | PUT|PATCH | ciiu/{ciiu}                     | ciiu.update            | App\Http\Controllers\Maestras\CiiuController@update           | api        |
+|        | DELETE    | ciiu/{ciiu}                     | ciiu.destroy           | App\Http\Controllers\Maestras\CiiuController@destroy          | api        |
+|        | POST      | personas                        | personas.store         | App\Http\Controllers\Persona\PersonaController@store          | api        |
+|        | GET|HEAD  | personas                        | personas.index         | App\Http\Controllers\Persona\PersonaController@index          | api        |
+|        | PUT|PATCH | personas/{persona}              | personas.update        | App\Http\Controllers\Persona\PersonaController@update         | api        |
+|        | DELETE    | personas/{persona}              | personas.destroy       | App\Http\Controllers\Persona\PersonaController@destroy        | api        |
+|        | GET|HEAD  | personas/{persona}              | personas.show          | App\Http\Controllers\Persona\PersonaController@show           | api        |
+|        | GET|HEAD  | personas/{persona}/cargo        | personas.cargo.index   | App\Http\Controllers\Persona\PersonaCargoController@index     | api        |
+|        | POST      | sexo                            | sexo.store             | App\Http\Controllers\Maestras\SexoController@store            | api        |
+|        | GET|HEAD  | sexo                            | sexo.index             | App\Http\Controllers\Maestras\SexoController@index            | api        |
+|        | GET|HEAD  | sexo/{sexo}                     | sexo.show              | App\Http\Controllers\Maestras\SexoController@show             | api        |
+|        | PUT|PATCH | sexo/{sexo}                     | sexo.update            | App\Http\Controllers\Maestras\SexoController@update           | api        |
+|        | DELETE    | sexo/{sexo}                     | sexo.destroy           | App\Http\Controllers\Maestras\SexoController@destroy          | api        |
+|        | GET|HEAD  | tipo_cliente                    | tipo_cliente.index     | App\Http\Controllers\Maestras\Tipo_clienteController@index    | api        |
+|        | POST      | tipo_cliente                    | tipo_cliente.store     | App\Http\Controllers\Maestras\Tipo_clienteController@store    | api        |
+|        | DELETE    | tipo_cliente/{tipo_cliente}     | tipo_cliente.destroy   | App\Http\Controllers\Maestras\Tipo_clienteController@destroy  | api        |
+|        | PUT|PATCH | tipo_cliente/{tipo_cliente}     | tipo_cliente.update    | App\Http\Controllers\Maestras\Tipo_clienteController@update   | api        |
+|        | GET|HEAD  | tipo_cliente/{tipo_cliente}     | tipo_cliente.show      | App\Http\Controllers\Maestras\Tipo_clienteController@show     | api        |
+|        | POST      | tipo_documento                  | tipo_documento.store   | App\Http\Controllers\Maestras\TipoDocumentoController@store   | api        |
+|        | GET|HEAD  | tipo_documento                  | tipo_documento.index   | App\Http\Controllers\Maestras\TipoDocumentoController@index   | api        |
+|        | GET|HEAD  | tipo_documento/{tipo_documento} | tipo_documento.show    | App\Http\Controllers\Maestras\TipoDocumentoController@show    | api        |
+|        | PUT|PATCH | tipo_documento/{tipo_documento} | tipo_documento.update  | App\Http\Controllers\Maestras\TipoDocumentoController@update  | api        |
+|        | DELETE    | tipo_documento/{tipo_documento} | tipo_documento.destroy | App\Http\Controllers\Maestras\TipoDocumentoController@destroy | api        |
+|        | GET|HEAD  | users                           | users.index            | App\Http\Controllers\User\UserController@index                | api        |
+|        | POST      | users                           | users.store            | App\Http\Controllers\User\UserController@store                | api        |
+|        | GET|HEAD  | users/{user}                    | users.show             | App\Http\Controllers\User\UserController@show                 | api        |
+|        | PUT|PATCH | users/{user}                    | users.update           | App\Http\Controllers\User\UserController@update               | api        |
+|        | DELETE    | users/{user}                    | users.destroy          | App\Http\Controllers\User\UserController@destroy              | api        |
+|        | GET|HEAD  | users/{user}/persona            | users.persona.index    | App\Http\Controllers\User\UserPersonaController@index         | api        |
++--------+-----------+---------------------------------+------------------------+---------------------------------------------------------------+------------+
