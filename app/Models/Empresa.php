@@ -37,4 +37,12 @@ class Empresa extends Model
         return $this->hasOne(Tipo_Cliente::class);
     }
 
+    public function usuarios(){
+        return $this->belongsToMany(User::class, 'empresa_user', 'empresa_id', 'usuario_id');
+    }
+
+    public function programaciones_emo(){
+        return $this->hasMany(ProgramacionEmo::class);
+    }
+
 }

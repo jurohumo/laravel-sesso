@@ -21,7 +21,7 @@ class CreateEmpresasTable extends Migration
             $table->unsignedBigInteger('ruc')->unique();
             $table->string('razon_social');
             $table->string('sigla');
-            $table->unsignedInteger('telefono_01');
+            $table->unsignedInteger('telefono_01')->nullable();
             $table->unsignedInteger('telefono_02')->nullable();
             $table->string('pais');
             $table->string('departamento');

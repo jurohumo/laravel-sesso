@@ -55,4 +55,12 @@ class User extends Authenticatable
     {
         return Str::random(40);
     }
+
+    public function empresas(){
+        return $this->belongsToMany(Empresa::class, 'empresa_user', 'usuario_id', 'empresa_id');
+    }
+
+    public function permisos(){
+        return $this->belongsToMany(Permiso::class, 'users_permisos', 'usuario_id', 'permiso_id');
+    }
 }

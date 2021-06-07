@@ -27,4 +27,8 @@ class Persona extends Model
     public function cargo(){
         return $this->belongsTo(Cargo::class);
     }
+
+    public function especialidades(){
+        return $this->belongsToMany(Especialidad::class, 'personas_especialidades', 'persona_id', 'especialidad_id');
+    }
 }

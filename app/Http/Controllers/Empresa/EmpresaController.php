@@ -30,9 +30,9 @@ class EmpresaController extends ApiController
     public function store(Request $request)
     {
         $rules = [
-            'tipo_cliente_id' => 'required',
-            'usuario_id' => 'required',
-            'ciiu_id' => 'required',
+            'tipo_cliente_id' => 'required|numeric',
+            'usuario_id' => 'required|numeric',
+            'ciiu_id' => 'required|numeric',
             'ruc' => 'required|numeric',
             'razon_social' => 'required',
             'sigla' => 'required',
@@ -53,6 +53,8 @@ class EmpresaController extends ApiController
         $data['urlimage'] = '1.png';
 
         $empresa = Empresa::create($data);
+
+        $empresa->usuarios()->syncWithoutDetaching([$data['usuario_id']]);
 
         return $this->showOne($empresa, 201);
     }

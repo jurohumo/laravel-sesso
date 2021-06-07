@@ -29,9 +29,7 @@ class CreatePersonasTable extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('tipo_documento_id')->references('id')->on('tipo_documento');
-            $table->foreign('cargo_id')->references('id')->on('cargo');
-            $table->foreign('sexo_id')->references('id')->on('sexo');
+
         });
     }
 

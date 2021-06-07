@@ -41,12 +41,24 @@ Route::resource('tipo_documento', 'Maestras\TipoDocumentoController', ['except' 
 
 //Persona 
 Route::resource('personas', 'Persona\PersonaController', ['except' => ['create', 'edit']]);
+Route::resource('especialidades', 'Persona\EspecialidadController', ['except' => ['create', 'edit']]);
 Route::resource('personas.cargo', 'Persona\PersonaCargoController', ['only' => ['index']]);
+Route::resource('personas.especialidades', 'Persona\PersonaEspecialidadController', ['except' => ['create', 'edit']]);
 
 //User 
 Route::resource('users', 'User\UserController', ['except' => ['create', 'edit']]);
+Route::resource('permisos', 'User\PermisoController', ['except' => ['create', 'edit']]);
+Route::resource('users.permisos', 'User\UserPermisoController', ['except' => ['create', 'edit']]);
 Route::resource('users.persona', 'User\UserPersonaController', ['only' => ['index']]);
+
 
 //Empresa 
 Route::resource('empresas', 'Empresa\EmpresaController', ['except' => ['create', 'edit']]);
 //Route::resource('users.persona', 'User\UserPersonaController', ['only' => ['index']]);
+Route::resource('areas', 'Empresa\AreaController', ['except' => ['create', 'edit']]);
+Route::resource('empresas.usuarios', 'Empresa\EmpresaUserController', ['except' => ['create', 'edit']]);
+
+
+//Programacion Emo
+
+Route::resource('programaciones_emo', 'ProgramacionEmo\ProgramacionEmoController', ['except' => ['create', 'edit']]);

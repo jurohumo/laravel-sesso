@@ -43,7 +43,7 @@ class UserController extends ApiController
         $data['estado'] = false;
 
         $data['password'] = bcrypt($request->password);
-        $data['remember_token'] = User::generarVerificationToken();
+        $data['remember_token'] = User::generarRememberToken();
 
         $user = User::create($data);
 
