@@ -6,17 +6,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Permiso extends Model
+class Maestria extends Model
 {
     use HasFactory, SoftDeletes;
+
+    protected $table = 'maestrias';
 
     protected $fillable = [
         'nombre', 'descripcion'
     ];
 
-
-    
-    public function usuarios(){
-        return $this->belongsToMany(User::class, 'users_permisos', 'permiso_id', 'usuario_id')->withTimestamps();
+    public function personas(){
+        return $this->belongsToMany(Persona::class, 'personas_maestrias', 'maestria_id', 'persona_id')->withTimestamps();
     }
 }

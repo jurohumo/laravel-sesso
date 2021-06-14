@@ -19,4 +19,8 @@ class ProgramacionEmo extends Model
     public function empresa(){
         return $this->belongsTo(Empresa::class);
     }
+
+    public function usuarios(){
+        return $this->belongsToMany(User::class, 'user_programacion_emo', 'programacion_emo_id', 'usuario_id')->withTimestamps();
+    }
 }

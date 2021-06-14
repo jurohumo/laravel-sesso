@@ -44,6 +44,8 @@ Route::resource('personas', 'Persona\PersonaController', ['except' => ['create',
 Route::resource('especialidades', 'Persona\EspecialidadController', ['except' => ['create', 'edit']]);
 Route::resource('personas.cargo', 'Persona\PersonaCargoController', ['only' => ['index']]);
 Route::resource('personas.especialidades', 'Persona\PersonaEspecialidadController', ['except' => ['create', 'edit']]);
+Route::resource('maestrias', 'Persona\MaestriaController', ['except' => ['create', 'edit']]);
+Route::resource('personas.maestrias', 'Persona\PersonaMaestriaController', ['only' => ['index', 'update', 'destroy']]);
 
 //User 
 Route::resource('users', 'User\UserController', ['except' => ['create', 'edit']]);
@@ -62,3 +64,4 @@ Route::resource('empresas.usuarios', 'Empresa\EmpresaUserController', ['except' 
 //Programacion Emo
 
 Route::resource('programaciones_emo', 'ProgramacionEmo\ProgramacionEmoController', ['except' => ['create', 'edit']]);
+Route::resource('programaciones_emo.usuarios', 'ProgramacionEmo\ProgramacionEmoUserController', ['except' => ['create', 'edit']]);

@@ -38,7 +38,7 @@ class Empresa extends Model
     }
 
     public function usuarios(){
-        return $this->belongsToMany(User::class, 'empresa_user', 'empresa_id', 'usuario_id');
+        return $this->belongsToMany(User::class, 'empresa_user', 'empresa_id', 'usuario_id')->withTimestamps();
     }
 
     public function programaciones_emo(){

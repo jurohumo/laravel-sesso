@@ -57,10 +57,14 @@ class User extends Authenticatable
     }
 
     public function empresas(){
-        return $this->belongsToMany(Empresa::class, 'empresa_user', 'usuario_id', 'empresa_id');
+        return $this->belongsToMany(Empresa::class, 'empresa_user', 'usuario_id', 'empresa_id')->withTimestamps();
     }
 
     public function permisos(){
-        return $this->belongsToMany(Permiso::class, 'users_permisos', 'usuario_id', 'permiso_id');
+        return $this->belongsToMany(Permiso::class, 'users_permisos', 'usuario_id', 'permiso_id')->withTimestamps();
+    }
+
+    public function programaciones_emo(){
+        return $this->belongsToMany(ProgramacionEmo::class, 'user_programacion_emo', 'usuario_id', 'programacion_emo_id')->withTimestamps();
     }
 }

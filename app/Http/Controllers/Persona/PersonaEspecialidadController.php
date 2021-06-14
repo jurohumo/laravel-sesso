@@ -22,28 +22,6 @@ class PersonaEspecialidadController extends ApiController
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Persona  $persona
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Persona $persona)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -66,7 +44,7 @@ class PersonaEspecialidadController extends ApiController
     public function destroy(Persona $persona, Especialidad $especialidad)
     {
         if(!$persona->especialidades()->find($especialidad->id)){
-            return $this->errorResponse('El permiso especificado no es una permiso de este usuario', 404);
+            return $this->errorResponse('La especialidad especificada no es una especialidad de esta persona', 404);
         }
 
         $persona->especialidades()->detach([$especialidad->id]);

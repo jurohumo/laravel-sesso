@@ -29,6 +29,10 @@ class Persona extends Model
     }
 
     public function especialidades(){
-        return $this->belongsToMany(Especialidad::class, 'personas_especialidades', 'persona_id', 'especialidad_id');
+        return $this->belongsToMany(Especialidad::class, 'personas_especialidades', 'persona_id', 'especialidad_id')->withTimestamps();
+    }
+
+    public function maestrias(){
+        return $this->belongsToMany(Maestria::class, 'personas_maestrias', 'persona_id', 'maestria_id')->withTimestamps();
     }
 }

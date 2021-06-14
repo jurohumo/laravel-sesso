@@ -17,6 +17,6 @@ class Especialidad extends Model
     ];
 
     public function personas(){
-        return $this->belongsToMany(Persona::class, 'personas_especialidades', 'especialidad_id', 'persona_id');
+        return $this->belongsToMany(Persona::class, 'personas_especialidades', 'especialidad_id', 'persona_id')->withTimestamps();
     }
 }
